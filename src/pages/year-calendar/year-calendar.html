@@ -1,0 +1,34 @@
+<!--
+  Generated template for the YearCalendarPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <!--<ion-navbar>
+    <ion-title>year-calendar</ion-title>
+  </ion-navbar>-->
+
+</ion-header>
+
+
+<ion-content  class="bg-style">
+	<!--<ion-datetime displayFormat="MM/DD/YYYY" [ngModel]="currentDate"></ion-datetime>
+	<p>cd/cm : {{currentDay}}/{{currentMonth}}</p>-->
+
+	
+	<ion-grid>
+    	<ion-row>
+    		<ion-col *ngFor="let length of months; let month = index" col-1="">
+    			<ion-list >
+    				<div *ngFor='let d of counter(length); let day = index' >
+    					<!-- 'radio-button-on' : 'radio-button-off' -->
+	    				<ion-icon  name='square' [ngClass]="(((month+1) == currentMonth) && (day == (currentDay-1)) ) ? 'today' : '' " [color]="(((month+1) < currentMonth) || ((month+1)==currentMonth && day < currentDay) ) ? 'warning' : 'transparent'"></ion-icon>
+	    				<br>
+					</div>
+    			</ion-list>
+    		</ion-col>
+    	</ion-row>
+    </ion-grid>
+</ion-content>

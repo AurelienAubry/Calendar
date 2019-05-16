@@ -1,0 +1,22 @@
+page-year-calendar {
+	.bg-style{
+		background: 	#424242;
+	}
+
+	ion-row {
+		text-align: center;
+	}
+
+	.today {
+		opacity:1;  
+    	animation: flickerAnimation 1.5s infinite;
+      
+    }
+
+	@keyframes flickerAnimation { /* flame pulses */
+	  0%   { opacity:1; }
+	  50%  { opacity:0.2; }
+	  100% { opacity:1; }
+	}
+
+}
