@@ -39,7 +39,7 @@ export class YearCalendarPage {
   	this.currentYear = this.currentDate.getFullYear();
 
   	if ((this.currentYear%4==0) && ((this.currentYear%100!=0) || (this.currentYear%400==0))){
-  		this.months[1] = 5;
+  		this.months[1] = 29;
   	}
   }
 
